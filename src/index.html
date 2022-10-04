@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Sprint2</title>
+  </head>
+  <body>
+    <header class="body__item header">
+        <h1 class="header__title" id="title">Juego del ahorcado</h1>
+    </header>
+    <main class="body__item main" id="main">
+        <div class="main__nav" id="nav">
+            <img src="./assets/arrow.svg" id="backArrow" class="nav__item">
+            <img src="./assets/keyboard.svg" id="keyboard" class="nav__item item__keyboard">
+            <img src="./assets/repeatArrow.svg" id="repeatArrow" class="nav__item">
+        </div>
+        <div class="main__div" id="mainWindows">
+            <section class="main__section main__section--config">
+
+            </section>
+            <section class="main__section main__section--index">
+                <input type="button" value="Nueva partida" class="button index__button--play" id="buttonPlay">
+                <input type="button" value="Añadir palabra" class="button index__button--config" id="buttonConfig">
+            </section>
+            <section class="main__section main__section--game"> 
+
+            </section>
+        </div>
+    </main>
+    <footer class="body__item footer">
+        <a href="#" class="footer__link link">
+            <img class="link__github" src="./assets/github.svg" alt="icono_github">
+        </a>
+    </footer>
+  </body>
+</html>
