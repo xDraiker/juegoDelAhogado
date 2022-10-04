@@ -209,6 +209,24 @@ body{
     backdrop-filter: var(--desenfoque);
     background-color: var(--color-cristal);
 }
+.config__add--message{
+    width: 80%;
+    text-align: center;
+    font-size: 25px;
+}
+.text__add:focus{
+    outline: 0 none;
+}
+.text__add{
+    width: 40%;
+    margin: 5px 0px;
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Heebo', sans-serif;
+    text-transform: uppercase;
+    border: none;
+    border-bottom: 2px solid #f5f5f5;
+}
 
 
 .footer{
@@ -272,26 +290,25 @@ body{
         font-size: 30px;
         font-weight: 500;
     }
-    /* .main__nav{
-        transition-duration: 0.3;
-    } */
     .main__section{
         flex-flow: column wrap;
         justify-content: space-around;
         align-items: center;
     }
-    /* .main__nav{
-        transition-duration: 0.3s;
-    }
-    .nav__active{
-        transition-delay: 0.6s;
-        transition-duration: 0.3s;
-    } */
     .button{
         font-size: 20px;
     }
     .index__button--play{
         animation: play 0.8s linear 0s infinite alternate-reverse;
+    }
+    .config__add--message{
+        width: 80%;
+        margin-top: 30px;
+        font-size: 20px;
+    }
+    .text__add{
+        width: 80%;
+        font-size: 20px;
     }
     .footer{
         padding: 10px 0px 0px 0px;

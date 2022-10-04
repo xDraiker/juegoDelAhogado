@@ -2,5 +2,5 @@ node_modules
 dist
 .babelrc
 config.sh
-postxss.config.js
+postcss.config.js
 webpack.config.js

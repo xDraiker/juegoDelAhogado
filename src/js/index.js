@@ -5,17 +5,14 @@ import ".././assets/repeatArrow.svg";
 import ".././assets/github.svg";
 
 import { moveToPlay, moveToConfig, moveToIndexFromPlay, moveToIndexFromConfig } from "./nav.js";
+import { randomWord } from "./wordGestor.js";
+import { addMessage, addText, addWord } from "./addWord.js";
 
 const main = document.getElementById('main');
 const game = {
     word: '',
     mainStatus: 'index',
-    words: ['GATO','PALETA','YOYO', 'PERRO', 'ALURA', 'PROGRAMACION', 'GIT', 'GITHUB', 'CSS', 'HTML', 'JAVASCRIPT', 'ORACLE', 'ANDROID', 'KOTLIN', 'JAVA', 'LINUX', 'UNIX', 'WEBPACK', 'MURCIELAGO', 'ELEFANTE', 'TOMATE', 'PIKACHU', 'PIRAÑA', 'ARAÑA', 'MANGO'],
-
-    randomWord(){
-        let random = Math.round(Math.random() * (this.words.length - 1));
-        this.word = this.words[random];
-    }
+    words: ['GATO','PALETA','YOYO', 'PERRO', 'ALURA', 'PROGRAMACION', 'GIT', 'GITHUB', 'CSS', 'HTML', 'JAVASCRIPT', 'ORACLE', 'ANDROID', 'KOTLIN', 'JAVA', 'LINUX', 'UNIX', 'WEBPACK', 'MURCIELAGO', 'ELEFANTE', 'TOMATE', 'PIKACHU', 'PIRAÑA', 'ARAÑA', 'MANGO']
 }
 
 const navButton = target => {
@@ -42,4 +39,8 @@ main.addEventListener('click', e=>{
     
     if ( /button*/.test(targetEvent) ) navButton(targetEvent);
     else if( / *Arrow/.test(targetEvent) ) navArrow(targetEvent);
+    else if ((targetEvent === 'add') && addText.value){
+        let word = addText.value.toUpperCase();
+        if(addWord(word, game.words)) game.words.push(word);   
+    } 
 });
